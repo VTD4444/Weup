@@ -20,6 +20,8 @@ public class UIGameManager : MonoBehaviour
     private void Start()
     {
         timePlay = 0;
+        PlayerController.score = 0;
+        PlayerController.hp = 10f;
     }
 
     private void Update()
@@ -40,8 +42,6 @@ public class UIGameManager : MonoBehaviour
         AudioManager.Instance.PlaySFX(AudioManager.Instance.click);
         Time.timeScale = 1;
         SceneManager.LoadScene("GamePlay");
-        // winPanel.SetActive(false);
-        // losePanel.SetActive(false);
     }
 
     public void WinGame()
